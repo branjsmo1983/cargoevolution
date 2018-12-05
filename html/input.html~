@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+ 
+<html xmlns='http://www.w3.org/1999/xhtml'>
+   <head >
+      <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+      <title >Form Page: sampleform</title>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="js-webshim/minified/polyfiller.js"></script>
+      <script>
+      webshim.polyfill('forms forms-ext');
+      webshim.setOptions('forms-ext', {types: 'date'});
+      </script>
+   </head>
+<body>
+<h1>Sample form page</h1>
+<?php
+$username = $_GET['username'];
+?>
+
+<?php echo ($username);?>
+<p>
+Nome utente: <input id="username" type="text" value="" />
+</p>
+ 
+<form action="/cgi-bin/input.pl" method="post" enctype="multipart/form-data">
+   <p>
+   Tipo viaggio: <select name="message_type">
+   <option value="0" selected>(please select:)</option>
+   <option value="1">Offro</option>
+   <option value="2">Cerco</option>
+   </select>
+   </p>
+   <p>
+   Data Carico: <input type="date" name="date_of_loading1" placeholder="dd/mm/yyyy"/>
+   </p>
+   <p>
+   Data Carico Alternativa: <input type="date" name="date_of_loading2" placeholder="dd/mm/yyyy"/>
+   </p>
+   <p>
+   Regione ritiro: <input type="text" name="pick_up_region"/>
+   </p>
+   <p>
+   Provincia ritiro: <input type="text" name="pick_up_province"/>
+   </p>
+   <p>
+   Regione consegna: <input type="text" name="delivery_region"/>
+   </p>
+   <p>
+   Provincia consegna: <input type="text" name="delivery_province"/>
+   </p>
+   <p>
+   Tipo veicolo: <select name="veihcle_type">
+   <option value="0" selected>(please select:)</option>
+   <option value="1">Telonato</option>
+   <option value="2">Aperto</option>
+   <option value="3">Frigo</option>
+   <option value="4">Autotreno</option>
+   <option value="5">Sponda idraulica</option>
+   <option value="6">Motrice tax</option>
+   </select>
+   </p>
+   <p>
+   <input type="submit" value="submit"/>
+   </p>
+</form>
+
+</body>
+</html>
+

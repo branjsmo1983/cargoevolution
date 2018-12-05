@@ -1,0 +1,85 @@
+function redirect (url) {
+    var ua        = navigator.userAgent.toLowerCase(),
+        isIE      = ua.indexOf('msie') !== -1,
+        version   = parseInt(ua.substr(4, 2), 10);
+
+    // Internet Explorer 8 and lower
+    if (isIE && version < 9) {
+        var link = document.createElement('a');
+        link.href = url;
+        document.body.appendChild(link);
+        link.click();
+    }
+
+    // All other browsers can use the standard window.location.href (they don't lose HTTP_REFERER like Internet Explorer 8 & lower does)
+    else { 
+        window.location.href = url; 
+    }
+};
+
+$(document).ready(function(){
+  $("form#loginForm").submit(function() { // loginForm is submitted
+    var username = $('#username').attr('value'); // get username
+    var password = $('#password').attr('value'); // get password
+
+    if (username && password) { // values are not empty
+      $.ajax({
+        type: "GET",
+        url: "/cgi-bin/login.pl", // URL of the Perl script
+         contentType: "application/json; charset=utf-8",
+        //contentType: "text/html; charset=utf-8",
+        dataType: "json",
+        // send username and password as parameters to the Perl script
+        data: "username=" + username + "&password=" + password,
+        // script call was *not* successful
+        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+          $('div#loginResult').text("responseText: " + XMLHttpRequest.responseText 
+            + ", textStatus: " + textStatus 
+            + ", errorThrown: " + errorThrown);
+          $('div#loginResult').addClass("error");
+        }, // error 
+        // script call was successful 
+        // data contains the JSON values returned by the Perl script
+        success: function(data){
+          if (data.error) { // script returned error
+            $('div#loginResult').text("data.error: " + data.error);
+            $('div#loginResult').addClass("error");
+          } // if
+          else { // login was successful
+            $('form#loginForm').hide();
+            $('div#loginResult').text("data.success: " + data.success 
+              + ", data.userid: " + data.userid);
+              // redirect here
+              // log in successful, save username for the current session and redirect to the main pag
+              // window.location.replace("/cgi-bin/login_succ.pl?username=" + data.userid);
+              //perlExecuteLogInSuccessful(data.userid);
+              redirect( "/cgi-bin/login_succ.pl?username=" + data.userid );
+              $('div#loginResult').addClass("success");
+          } //else
+        } // success
+      }); // ajax
+    } // if
+    else {
+      $('div#loginResult').text("enter username and password");
+      $('div#loginResult').addClass("error");
+    } // else
+    $('div#loginResult').fadeIn();
+    return false;
+  });
+});
+
+function perlExecuteLogInSuccessful(username){
+    
+   $.ajax({
+      type: 'POST',
+      url: '/cgi-bin/perlExecuteLogInSuccessful.pl?username='+username,
+      data: { 'username': username },
+      success: function(res) {
+      $('#selectAction').empty();
+	  document.getElementById("selectAction").innerHTML = res;
+      // document.getElementById("deliveryRegionDiv").innerHTML=res;
+      },
+      error: function() {alert("selectAction: did not work");}
+   }); // ajax
+   }; // function
+

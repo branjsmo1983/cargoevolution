@@ -1,0 +1,24 @@
+
+$(document).ready(function () {
+
+$("#delivery_region").change(function(event) {
+  // Get some values from elements on the page: 
+    var delivery_region = $('#delivery_region option:selected').attr('value'); // get data
+    alert(delivery_region);
+    perlExecuteDelivery(delivery_region);
+ });
+});
+
+function perlExecuteDelivery(delivery_region){
+    $.ajax({
+        type: 'POST',
+        url: '/cgi-bin/delivery_region.pl?delivery_region='+delivery_region,
+        data: { 'delivery_region': delivery_region },
+        success: function(res) {
+        document.getElementById("deliveryRegionDiv").innerHTML=res;
+        //document.write(res);
+        },
+        error: function() {alert("did not work");}
+    });
+};
+

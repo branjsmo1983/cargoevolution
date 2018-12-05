@@ -1,0 +1,2 @@
+GRANT INSERT ON TABLE feedback TO cargoevo_postgres;
+GRANT USAGE, SELECT ON SEQUENCE feedback_id_seq TO cargoevo_postgres;

@@ -1,0 +1,62 @@
+.h1{
+	font-size: 60px;
+}
+
+.h2{
+	font-size: 50px;
+	
+}
+.h3{
+	font-size: 40px;
+	
+}
+
+
+.h4{
+	font-size: 20px;
+}
+
+.btnUp{
+	border-bottom: 4px solid black;
+}
+
+.btnDown{
+	border-bottom: 4px solid black;
+}
+
+.btnUpLeft{
+			
+}
+
+.btnUpRight{
+	
+	border-left: 4px solid black;
+	
+}
+
+.btnDownLeft{
+	
+	
+}
+
+.btnDownRight{
+	
+	border-left: 4px solid black;
+}
+.messageBoxChat{
+	overflow: scroll;
+	height: 700;
+        margin-left: 0px;
+	padding-left: 0px;
+}
+.smallTextInBox{
+	font-size: 15px;
+}
+
+.smallTitleInBox{
+	font-size: 15px;
+	background-color: lightblue;
+	margin-left:0px;
+	
+	
+}

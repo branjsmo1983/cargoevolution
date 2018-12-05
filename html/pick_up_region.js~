@@ -1,0 +1,23 @@
+
+$(document).ready(function () {
+
+$("#pick_up_region").change(function(event) {
+  // Get some values from elements on the page: 
+    var pick_up_region = $('#pick_up_region').attr('value'); // get data
+    perlExecutePickUp(pick_up_region);
+ });
+});
+
+function perlExecutePickUp(pick_up_region){
+    $.ajax({
+        type: 'POST',
+        url: '/cgi-bin/pick_up_region.pl?pick_up_region='+pick_up_region,
+        data: { 'pick_up_region': pick_up_region },
+        success: function(res) {
+        document.getElementById("pickUpRegionDiv").innerHTML=res;
+        //document.write(res);
+        },
+        error: function() {alert("did not work");}
+    });
+};
+

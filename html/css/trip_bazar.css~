@@ -1,0 +1,117 @@
+body {
+    background-color: #ff9933;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    color: white;
+    font-family: verdana;
+    font-size: 20px;
+}
+
+div {
+    color: white;
+    font-family: verdana;
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #bbb;
+    color: white;
+    font-size: 20px;
+}
+th {
+    border-top: 1px solid #ddd;
+    padding: 4px 8px;
+    background-color: #808080;
+    color: white;
+    font-size: 24px;
+}
+
+td {
+    border-top: 1px solid #ddd;
+    padding: 4px 8px;
+    background-color: #ff9933;
+    color: white;
+    font-size: 20px;
+}
+
+td:nth-child(2n)
+{
+    background-color: #ff9933;
+    color: white;
+    font-size: 20px;
+}
+
+a {
+    color: black;
+    font-size: 14px;
+}
+
+mark { 
+    background-color: black;
+    color: white;
+}
+
+fieldset{
+    width:340px;
+}
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 320px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+guidance {
+    float: right;
+    max-width: 320px;
+    margin-right: 8cm;
+    padding: 1em;
+}
+
+guidance ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#loginContent { width: 350px; margin: 100px auto; }
+      button[type] { margin: 0.5em 0; }
+

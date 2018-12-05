@@ -1,0 +1,249 @@
+body {
+    background-color: #ffffff;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    color: black;
+    font-size: 14px;
+}
+
+p mark { 
+    background-color: black;
+    color: white;
+}
+
+select {
+    color: black;
+    /*font-family: verdana;*/
+    font-size: 14px;
+}
+
+
+option {
+    color: black;
+    /*font-family: verdana;*/
+    font-size: 14px;
+}
+
+ul{
+    color: black;
+    /*font-family: verdana;*/
+    font-size:14px;
+}
+
+
+div {
+    color: black;
+    /*font-family: verdana;*/
+    font-size: 14px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #bbb;
+    color: white;
+    font-size: 20px;
+}
+th {
+    border-top: 1px solid #ddd;
+    padding: 4px 8px;
+    background-color: #808080;
+    color: white;
+    font-size: 24px;
+}
+
+table tr:nth-child(even) {background: #a3a3a3;}
+table tr:nth-child(odd) {background: #ffffff;}
+
+td {
+    border-top: 1px solid #ddd;
+    padding: 4px 8px;
+    /*background-color: #ff9933;*/
+    color: black;
+    font-size: 20px;
+    border-right: solid 1px #bbb; 
+    border-left:  solid 1px #bbb;
+}
+
+table.chat {
+    border: none;
+    font-size: 20px;
+    table-layout: fixed;
+    width: 600px;
+}
+table.chat th {
+    border-top: 1px solid #ddd;
+    padding: 4px 8px;
+    background-color: #ffffff;
+    color: white;
+    font-size: 24px;
+    border-right: solid 1px #bbb; 
+    border-left: solid 1px #bbb;
+}
+
+table.chat tr:nth-child(even) {background: #a3a3a3;}
+table.chat tr:nth-child(odd) {background: #ffffff;}
+
+table.chat td {
+    border-top: none;
+    border-bottom: solid 1px #bbb;
+    padding: 4px 8px;
+    /*background-color: #ff9933;*/
+    color: black;
+    font-size: 20px;
+    border-right: none; 
+    border-left: none;
+    background-color: gray;
+    width: 35px;
+}
+
+table.chat td.separator {
+    border-top: none;
+    border-bottom: none;
+    padding: 4px 8px;
+    /*background-color: #ff9933;*/
+    color: white;
+    font-size: 20px;
+    border-right: none; 
+    border-left: none;
+    background-color: #ffffff;
+    width: 45px;
+}
+
+table.chat td.hidden {
+    border-top: none;
+    border-bottom: none;
+    padding: 4px 8px;
+    /*background-color: #ff9933;*/
+    color: #ffffff;
+    font-size: 20px;
+    border-right: none; 
+    border-left: none;
+    background-color: #ffffff;
+}
+a {
+    color: black;
+    font-size: 14px;
+}
+
+li:hover {
+	background-color: #202020
+}
+
+
+mark { 
+    background-color: black;
+    color: white;
+}
+
+fieldset{
+    width:340px;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    font-size: 14px;
+}
+
+header a {
+    color: white;
+}
+
+messages {
+    padding: 1em;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+    font-size: 14px;
+}
+
+nav {
+    float: left;
+    max-width: 220px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    color: white;
+    background-color: black;
+}
+   
+nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li {
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+article {
+    margin-left: 220px;
+    /*border-left: 1px solid gray;*/
+    padding: 1em;
+    overflow: hidden;
+}
+
+guidance {
+    float: right;
+    max-width: 140px;
+    margin-right: 200px;
+    padding: 1em;
+}
+
+guidance ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#loginContent { width: 350px; margin: 100px auto; }
+      button[type] { margin: 0.5em 0; }
+
+/** Form fixes*/
+/* Only one input per row */
+select, input, button {
+   display: block;
+   margin-bottom: 1em;
+   max-width: 80%;
+   font-size: 120%;
+}
+
+/* Follow the size of input elements */
+label {
+   font-size: 120%;
+}
+
+/* Checkbox is still inline */
+input[type=checkbox] {
+    display: inline;
+}
+
+textarea { font-size: 22px; }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid gray;
+    margin: 1em 0;
+    padding: 0;
+}

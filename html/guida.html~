@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="root" >
+
+    <title>Guida</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="banner2">
+
+        <div class="container">
+
+            <div class="row">
+               <div class="col-lg-12">
+                    
+                        <h2>Guida all'uso del servizio</h2>
+		 </div>
+                
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+    <!-- Page Content -->
+
+	<a  name="services"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+
+                    <div class="clearfix"></div>
+                    
+
+		 <div class="col-lg-4 col-lg-offset-5 col-sm-6">
+    			<a href="javascript:history.back()">>Torna indietro</a>
+                </div>
+<hr class="intro-divider">
+<p class="lead">
+
+<ul class="lista">
+<li><p><b>La pagina principale:</p></b>
+<p>
+Questa è la pagina che viene visualizzata appena effettuato l'accesso al sito. Sulla sinistra trovi una lista di possibili azioni:
+</p>
+<img src="/img/cargo_mainpage.jpg" width="42%" height="42%" /> 
+<p>
+-> I miei annunci. Cliccando su questo link trovi tutti i gli annunci che hai inserito, e puoi vedere le chat associate a ciascun annuncio. Se qualche utente ti contatta per un trasporto vedrai
+un numero che indica il numero di messaggi non letti.
+</p>
+<p>
+-> Storico chat. Qui trovi la lista di tutte chat che hai intrapreso per aggiudicarti un annuncio.
+</p>
+<p>
+-> Inserisci un annuncio. Questa pagina per inserire i dettagli relativi al materiale che ti serve trasportare.
+</p>
+<p>
+-> Cerca negli annnunci. Questa pagina serve per cercare annunci di persone che hanno bisogno di movimentare merce.
+</p>
+<p>
+-> Guida. Questa pagina
+</p>
+<p>
+-> F.A.Q. Domande frequenti
+</p>
+<p>
+-> Glossario. Termini usati nel sito
+</p>
+
+
+<p><b>I miei annunci:</p></b>
+<p>
+Dalla lista degli annunci è possibile controllare se qualcuno ti ha contattato in merito ad un annuncio ed eventualemnte di rispondergli. Inoltre per ciascun annuncio più utenti ti possono contattare; se questo accade 
+viene generata una chat diversa per ciascun utente che ti ha contattato, per accedervi basta selezionare "Vettore1", "Vettore2" etc...
+</p>
+<p>
+In questo modo puoi valutare più offerte per un singolo annuncio e quando hai deciso a chi affidare il trasporto clicca su "Conferma Trasportatore" in fondo alla pagina della chat. A questo punto sia tu che l'utente contattato riceverete 
+una email  di "Trasporto Concordato", che riassume i dettagli del viaggio, ed i recapiti dell'altro utente (Indirizzo email e numero di telefono).</p>
+<p>
+Trascorsi due giorni dalla data di carico riceverai un email per lasciare il feedback sul trasportatore che va da 0 a 5.
+Trascorsi ulteriori 60 giorni l'altro utente riceverà una email per lasciare il feedback su di te. Si aspetta il decorrere di 60 giorni per darti il tempo di effettuare il pagamento secondo accordi, non dimenticare che i pagamenti 
+su questo sito sono a 60 giorni salvo accordi fra te ed il vettore. 
+</p>
+
+<p><b>Storico chat:</p></b>
+<p>
+Cargoevolution garantisce l'anonimato fino alla conclusione della trattativa tramite delle chat.
+Chat
+La chat è uno strumento fondamentale di cargoevolution.
+Funziona come i principali programmi di messaggistica indicando la data e l'ora a cui un messaggio è stato scritt, e se l'utente a cui hai scritto a visualizzato o meno il messaggio.
+La chat è il metodo con il quale si effettua la trattativa in forma anonima: cercando fra gli annunci basta cliccare su chat per 
+scrivere direttamente a chi ha inserito l'annuncio. Se a sinistra dell'annuncio c'è una luce verde significa che l'utente è online e dunque sarà in grado di risponderti immediatamente. Se
+la luce è rossa significa che l'utente non ha effettuato operazioni del precedente quarto d'ora, e dunque presumibilmente non sarà in grado di risponderti immediatamente. Questo non è un problema
+perchè cargoevolution spedisce una mail con i riferimenti del viaggio ed il messaggio scritto sulla chat all'indirizzo email indicato durante la registrazione. Appena l'utente controllerà la 
+propria email, saprà che è stato contattato per un trasporto, a quel punto ti potrà rispondere accedendo egli stesso alla chat.
+</p>
+
+<p><b>Cerca negli annunci:</p></b>
+<p>
+Questa pagina serve a filtrare gli annunci presenti nel database. Per evitare di avere troppi risultati compila i campi di cui sei sicuro, ad esempio Luogo di ritiro della merce, oppure data.
+Non compilare i campi di cui non sei sicuro, cargoevolution ti presenterà automaticamente tutte le possibilità.
+</p>
+
+<li><b>La pagina di gestione account:</b>
+<p>Si accede a questa pagina cliccando su <a>gestisci account</a> nella pagina principale.Qui puoi modificare i tuoi dati personali, specificare il tuo parco mezzi, inserire i DURC aggiornati ed accedere a funzionalità avanzate come la black list.</p>
+
+<p>
+<b>DURC.</b>
+Da questa pagina puoi anche fare l'upload dei pdf contenenti il DURC. Basta cliccare su seleziona file e prendere il PDF.
+Il DURC deve essere inserito come file pdf non scannerizzato.
+</p>
+
+<p>
+<b>Parco mezzi.</b>
+Questa sezione è importante perchè dichiari che tipologia di mezzi di cui la tua azienda è in possesso. Queste informazioni servono solo ad aiutare nella scrematura dei messaggi
+quando effettui le ricerche: ad esempio se non hai il patentino ADR quando effettuerai una ricerca non ti verranno visualizzati i trasporti che richiedono tale patentino.
+</p>
+
+<p>
+<b>Blacklist.</b>
+In passato hai auto problemi con altri trasportatori? Basta accedere alla pagina Gestisci il tou Account e configurare la blacklist. In fondo alla pagina c'è una voce chiamata blacklist. Cercando 
+la ragione sociale è possibile inserirla nella blacklist cliccando sul pulsante "Blocca". In questo modo la ditta di trasporti con cui non hai buoni rapporti non potrà
+vedere i tuoi annunci.
+Noterai che le ditte inserite nella blacklist d'ora in poi saranno sempre visibili dalla rua pagina di gestione account. Per togliere una ditta dalla blacklist basta cliccare sul pulsante "Sblocca" a fianco il nome della ditta che vuoi riabilitare.
+</p>
+
+<p>
+Un altro caso d'uso della backlist è di evitare che un collega della tua azienda ti contatti per un trasporto: per evitare questo basta inserire la tua azienda nella blacklist!
+</p>
+
+
+<hr class="intro-divider">
+                </div>
+                
+            </div>
+
+        </div>
+        
+
+    </div>
+  
+<a name="regole"></a>
+
+    <!-- /.content-section-b -->
+
+
+    <!-- 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+              
+                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+-->
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

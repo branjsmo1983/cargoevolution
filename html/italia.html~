@@ -1,0 +1,27 @@
+<map name="regioni" id="regioni">
+    <area shape="rect" coords="14, 24, 35, 37" href="/cgi-bin/login_succ.pl?username=
+EOF
+    
+my $cgi = CGI->new;
+my $username = $cgi->param("username");
+print $username;
+print <<EOF;
+&delivery_region=Valle&#32Aosta" target="_self" alt="Sardegna">
+    <area shape="circle" coords="45, 156, 29" href="/cgi-bin/login_succ.pl?username=
+EOF
+    
+my $cgi = CGI->new;
+my $username = $cgi->param("username");
+print $username;
+print <<EOF;
+&delivery_region=Sardegna" target="_self" alt="Sardegna">
+    <area shape="poly" coords="105, 199, 115, 197, 121, 200, 131, 201, 139, 198, 150, 197, 156, 195, 151, 201, 145, 209, 148, 212, 150, 219, 152, 225, 147, 227, 144, 231, 128, 221, 119, 219, 113, 212, 108, 212, 102, 210, 98, 205" href="/cgi-bin/login_succ.pl?username=
+EOF
+    
+my $cgi = CGI->new;
+my $username = $cgi->param("username");
+print $username;
+    
+print <<EOF;
+&delivery_region=Sicilia" target="_self" alt="Sicilia">
+</map>

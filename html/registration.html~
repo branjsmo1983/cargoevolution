@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Registrati</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dcalendar.picker.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+<style type="text/css">
+#deceased{
+    background-color:#FFF3F5;
+	padding-top:10px;
+	margin-bottom:10px;
+}
+.remove_field{
+	float:right;	
+	cursor:pointer;
+	position : absolute;
+}
+.remove_field:hover{
+	text-decoration:none;
+}
+</style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/dcalendar.picker.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+        <script src="/generateSid.js"></script>
+	<script type='text/javascript'>
+	$(function() {
+		//calendar call function
+		$('.datepicker').dcalendar();
+		$('.datepicker').dcalendarpicker();
+
+		    var max_fields = 10; //maximum input boxes allowed
+		    var x = 1; //initlal text box count
+		
+		$('#add').click(function () {		   
+			if(x < max_fields){ //max input box allowed
+			    x++; //text box increment
+			    $("#addblock").before('<div class="col-md-12 col-sm-12" id="deceased">	<a href="#" class="remove_field" title="Remove">X</a>	<div class="form-group col-md-3 col-sm-3">            <label for="name">Name*</label>            <input type="text" class="form-control input-sm" id="name" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="gender">Gender*</label>            <input type="text" class="form-control input-sm" id="gender" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="age">Age*</label>            <input type="text" class="form-control input-sm" id="age" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="DOB">Date of Birth or Exact Birth Year*</label>            <input type="text" class="form-control input-sm datepicker" id="DOB'+x+'" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="DOD">Date of Death or Exact Death Year*</label>             <input type="text" class="form-control input-sm datepicker" id="DOD'+x+'" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="mother">Deceased Person\'s Mother Name*</label>            <input type="text" class="form-control input-sm" id="mother" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">            <label for="father">Deceased Person\'s Father Name*</label>            <input type="text" class="form-control input-sm" id="father" placeholder="">        </div>	<div class="form-group col-md-3 col-sm-3">	    <label for="photo">Upload Photo*</label>	    <input type="file" id="photo">	    <p class="help-block">Please upload individual photo. Group photo is not acceptable.</p>	</div></div>');
+
+				$('.datepicker').dcalendarpicker();
+			}  else{
+				alert("Only 10 Names Allowed");
+			}  
+		});
+		$(document).on('click', '.remove_field', function(e){
+		        e.preventDefault(); 
+			$(this).parent('div').remove(); 
+			x--;
+		});
+
+		
+	});
+	</script>
+  </head>
+  <body id="MainBody" name="MainBody">
+	
+    <div class="banner2">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+		    <h3>Benvenuto in</h3>
+                    <h1>Cargoevolution!</h1>
+			        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="./index.html" class="btn btn-default btn-lg"><i class="fa-fw"></i> <span class="network-name">Home</span></a>
+                            </li>
+                            <li>
+                                <a href="./login.html" class="btn btn-default btn-lg"><i class="fa-fw"></i> <span class="network-name">Accedi</span></a>
+                            </li>
+<!--
+                            <li>
+                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            </li>
+-->
+                        </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+<a name="registrati"></a>
+<div class="panel panel-primary" style="margin:20px;">
+	<div class="panel-heading">
+        	<h3 class="panel-title">Registrati</h3>
+	</div>
+<div class="panel-body">
+    <form action="/cgi-bin/insert_user.pl" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+<div id="sid_field">
+</div>
+<div class="col-md-12 col-sm-12">
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="username">Username</label>
+            <input type="text" class="form-control input-sm" id="username" name="username" placeholder="">
+        </div>
+        <div class="form-group col-md-6 col-sm-6">
+            <label for="uemail">Email</label>
+            <input type="email" class="form-control input-sm" required="required" id="uemail" name="uemail" placeholder="">
+        </div>
+
+        <div class="form-group col-md-6 col-sm-6">
+            <label for="password">Password</label>
+            <input type="password" class="form-control input-sm" id="password" name="password" placeholder="">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+	      <label for="password_c">Conferma Password</label>
+	      <input type="password" class="form-control input-sm" id="password_c" name="password_c" placeholder="">
+	      <!--<textarea class="form-control input-sm" id="address" rows="3"></textarea>-->
+	   </div>
+	
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="company">Azienda</label>
+            <input type="text" class="form-control input-sm" required="required" id="company" name="company" placeholder="">
+        </div>
+	
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="vat_number">Partita IVA</label>
+            <input type="text" class="form-control input-sm" required="required" id="vat_number" name="vat_number" placeholder="">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="phone">Telefono</label>
+            <input type="text" class="form-control input-sm" required="required" id="phone" name="phone" placeholder="">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="mobile">Cellulare</label>
+            <input type="text" class="form-control input-sm" required="required" id="mobile" name="mobile" placeholder="">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="referente">Referente</label>
+            <input type="text" class="form-control input-sm" required="required" id="referer" name="referer" placeholder="">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="address">Indirizzo</label>
+            <textarea class="form-control input-sm" id="address" name="address" rows="3" placeholder="Sede operativa"></textarea>
+        </div>
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="register">Albo Trasportatori</label>
+            <input type="text" class="form-control input-sm" id="register" name="register" placeholder="Scrivi il numero di iscrizione">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+           <label for="photo">DURC</label>
+	    <input type="file" id="files" name="files">
+	    <p class="help-block">Per piacere, carica un file .pdf</p>
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6" >
+            <label for="national_trans">Trasporti nazionali
+	    <input type="checkbox" checked data-toggle="toggle" name="national_trans" id="national_trans" checked></label>
+	    <span class="help-block">lascia la spunta se fai trasporti nazionali</span>
+	</div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="international_trans">Trasporti internazionali
+             <input type="checkbox" checked data-toggle="toggle" name="international_trans" id="international_trans" checked></label>
+	    <span class="help-block">lascia la spunta se fai anche trasporti internazionali</span>
+        </div>
+
+	<div class="form-group col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+		<h4>Hai le seguenti tipologie di mezzo? (marca la casella in caso affermativo):</h4>
+		
+	</div>
+	
+	<div class="col-md-12 col-sm-12" id="deceased">
+	<div class="form-group col-md-3 col-sm-3">
+            <label for="tractor">Motrici</label>
+            <input type="checkbox" name="tractor" id="tractor" checked />
+        </div>
+	<div class="form-group col-md-3 col-sm-3">
+            <label for="tractor_lift">Motrici con sponda</label>
+            <input type="checkbox" name="tractor_lift" id="tractor_lift" />
+        </div>
+	<div class="form-group col-md-3 col-sm-3">
+            <label for="trucks">Autotreni</label>
+            <input type="checkbox" name="trucks" id="trucks" />
+        </div>
+	<div class="form-group col-md-3 col-sm-3">
+            <label for="semitrailer">Semirimorchio centinato</label>
+            <input type="checkbox" name="semitrailer" id="semitrailer" />
+        </div>
+	<div class="form-group col-md-3 col-sm-3">
+            <label for="semitrailer_fridge">Semirimorchio Frigo</label>
+            <input type="checkbox" name="semitrailer_fridge" id="semitrailer_fridge" />
+        </div>
+	<div class="form-group col-md-3 col-sm-3">
+            <label for="semitrailer_open">Semirimorchio Aperto</label>
+            <input type="checkbox" name="semitrailer_open" id="semitrailer_open" />
+        </div>
+	<div class="form-group col-md-3 col-sm-3">
+            <label for="low_bed_semitrailer">Semirimorchio Ribassato</label>
+            <input type="checkbox" name="low_bed_semitrailer" id="low_bed_semitrailer" />
+        </div>
+	<div class="form-group col-md-3 col-sm-3">
+	    <label for="semitrailer_coils">Semirimorchio con Buca Coils</label>
+	    <input type="checkbox" name="semitrailer_coils" id="semitrailer_coils" />
+	</div>
+	<div class="form-group col-md-3 col-sm-3">
+	    <label for="adr_vehicle">Veicolo ADR</label>
+	    <input type="checkbox" name="adr_vehicle" id="adr_vehicle" /> 
+	</div>
+</div>
+
+<div class="form-group">
+        <label class="col-xs-3 control-label">Informativa sulla privacy</label>
+        <div class="col-xs-9">
+            <div style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;">
+                <p><span style="text-transform: uppercase">INFORMATIVA AI SENSI DELL’ART. 13 DEL D.LGS. 196/2003 (CODICE PRIVACY)</span></p>
+
+Ai sensi dell’articolo 13 del Decreto Legislativo n.196/2003, ti forniamo le seguenti informazioni:
+- I dati raccolti in occasione dell’invio dei quesiti/pareri verranno trattati per finalità contabili, nonché per l’elaborazione e l’invio delle risposte richieste;
+- I dati saranno trattati con modalità informatizzate;
+- Esauriti gli scopi di cui al punto 1, i testi dei quesiti/pareri pervenuti saranno conservati con il solo riferimento al mittente, depurati di ogni altro dato personale in essi contenuti;
+- Il conferimento dei dati personali del mittente è necessario ai fini della fornitura e della fatturazione del servizio richiesto e l’eventuale rifiuto a fornire tali dati comporterà l’impossibilità di fornirti la risposta al quesito/parere inoltratoci;
+- I dati saranno trattati esclusivamente da collaboratori specialisti della materia nominati incaricati del trattamento;
+- I dati potranno essere trattati anche per inviarti (via e-mail o a mezzo posta) proposte di iniziative future da noi organizzate o patrocinate. Potrai opporti a tali invii in qualsiasi momento e noi te lo ricorderemo in ogni comunicazione ulteriore;
+- I dati personali non saranno oggetto di diffusione ovvero di comunicazione alcuna.
+<!--
+Ti ricordiamo, infine, che in qualunque momento potrai esercitare i diritti di cui all’art. 7 del Decreto Legislativo n.196/2003 contattando il Titolare del trattamento Privacy.it Srl - Via Canova, 7/a – 20145 Milano (MI), o scrivendo all’indirizzo e-mail: contact@privacy.it.
+
+Salvo risulti indispensabile ai fini della risposta, si consiglia di fare uso di nomi fittizi o di sigle qualora si debba fare riferimento a persone o soggetti terzi.
+-->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-6 col-xs-offset-3">
+            <div class="checkbox">
+		<form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+                <label>
+                    <input type="checkbox" name="agree" value="agree" id="privacy_check" onclick="enableSubmit()" /> Acconsento al trattamento dei miei dati personali 
+ <!-- <a href="./conditions.html">terms and conditions</a> -->
+                </label>
+            </div>
+        </div>
+    </div>
+
+<div class="col-md-12 col-sm-12" id="privacy_confirmed">
+</div>
+<div class="col-md-12 col-sm-12" id="terms_link">
+</div>
+</form>
+</div>
+<script>
+window.enableSubmit=function()
+{
+
+  if(document.getElementById('privacy_check').checked == true){ 
+      $('#privacy_confirmed').html('<div class="form-group col-md-3 col-sm-3 pull-right" > <input type="submit" class="btn btn-primary" value="Registrati"/> </div>');
+      $('#terms_link').html('<div class="form-group col-md-3 col-sm-3 pull-right" > Premendo <b>Registrati</b> accetti i <a href="./conditions.html">termini d\'uso del servizio</a> </div>');       
+   }
+   else
+   {
+      $('#privacy_confirmed').empty();
+      $('#terms_link').empty();
+   }
+}
+</script>
+
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>
+
+<script type="text/javascript">
+
+    var password = document.getElementById("password")
+      , password_c = document.getElementById("password_c");
+
+    function validatePassword(){
+      if(password.value != password_c.value) {
+        password_c.setCustomValidity("Le password non corrispondono");
+      } else {
+        password_c.setCustomValidity('');
+      }
+    }
+
+    password.onchange = validatePassword;
+    password_c.onkeyup = validatePassword;
+
+</script>
+</body>
+</html>
